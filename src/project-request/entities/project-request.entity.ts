@@ -40,8 +40,8 @@ export class ProjectRequest {
   @Column({ type: 'enum', enum: Priority })
   priority: Priority;
 
-  @Column({ type: 'timestamp' })
-  dueDate: Date;
+  @Column('text', { nullable: true })
+  description: string;
 
   @CreateDateColumn()
   createdAt: Date;
